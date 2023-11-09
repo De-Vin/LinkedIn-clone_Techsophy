@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import userReducer from '../features/userSlice';
+import experienceSlice from '../features/experienceSlice';
+import educationSlice from '../features/educationSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    user: userReducer,
+    experience: experienceSlice,
+    education : educationSlice,
   },
 });

@@ -1,0 +1,6 @@
+.popup_content > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: rgb(61, 61, 61);
+}

@@ -1,0 +1,188 @@
+.profile{
+    flex: 0.5;
+    border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 10%;
+}
+.profile_avatar{
+    margin-bottom: 10px;
+    padding: 50px;
+    margin-left: 30px;
+}
+.profile_header{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+.profile_header_section{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+.profile_header > img{
+    margin-bottom: -80px;
+    width: 100%;
+    height: 120px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    object-fit: cover;
+}
+
+.profile_header_section > h4 {
+    font-weight: 400;
+    color: rgb(21, 21, 21);
+}
+.profile_header_section > p {
+    color: gray;
+  }
+.profile_header_section > h2{
+    font-weight: 650;
+    color: rgb(38, 37, 37);
+}
+  
+.profile_header_section > p > span {
+    color: #0077b5;
+    font-weight: 600;
+}
+  
+.profile_header_section > span {
+    color: #0077b5;
+    font-weight: 600;
+    margin-left: 0px !important;
+}
+
+
+.profile_about{
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.about_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+.about_header > h2{
+    font-weight: 500;
+    color: rgb(21, 21, 21);
+}
+.about_editIcon{
+    padding: 10px;
+    border-radius: 50%;
+    color: gray;
+}
+.about_editIcon:hover{
+    background-color: rgb(213, 211, 211);
+    color: black;
+    cursor: pointer;
+}
+.about_content{
+    width: 90%;
+    margin-top: 5px;
+  margin-bottom: 20px;
+ margin-left: auto;
+ margin-right: auto;
+}
+.about_content > p {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    word-spacing: 1.6px;
+    font-weight: 400;
+    color: rgb(73, 73, 73);
+}
+
+.profile_experience{
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.experience_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.experience_header > h2{
+    font-weight: 500;
+    color: rgb(21, 21, 21);
+}
+.add_icon{
+    padding: 10px;
+    border-radius: 50%;
+    color: gray;
+}
+.add_icon:hover{
+    background-color: rgb(213, 211, 211);
+    color: black;
+    cursor: pointer;
+}
+.experience_content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+}
+.experience_card{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    height: fit-content;
+    margin-bottom: -0.5px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.experience_cardinner{
+    display: flex;
+    justify-content: space-between;
+}
+.experience_icons{
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.experience_items{
+    width: fit-content;
+}
+.experience_items > h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.experience_items > span {
+    font-size: 0.9rem;
+}
+.experience_items > h4 {
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+.experience_cardouter > p {
+    width: 100%;
+    margin-top: 15px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    word-spacing: 1.6px;
+    font-weight: 400;
+    color: rgb(73, 73, 73);
+}

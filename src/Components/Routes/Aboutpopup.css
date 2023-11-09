@@ -1,0 +1,58 @@
+/* Aboutpopup.css */
+.popup_overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+  
+.popup_content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    z-index: 999;
+}
+  
+.popup_content p {
+    margin: 0;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+  
+.popup_content input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+  
+.popup_content button {
+    padding: 10px;
+    width: 25%;
+    background: lightgray;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 15px;
+}
+.popup_content > button:hover{
+    background: #0a66c2;
+}

@@ -1,0 +1,51 @@
+.profileWidget{
+    flex: 0.2;
+    background: white;
+    border-radius: 10px;
+    margin-left: 15px;
+    height: fit-content;
+    border: 1px solid lightgray;
+}
+.profileWidget_header > h2{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.peoplecard{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 15px;
+}
+.people_content{
+    margin-left: 10px;
+}
+.people_content > h3 {
+    font-weight: 550;
+    font-size: 14px;
+}
+.people_content > p {
+    font-weight: 400;
+    font-size: 12px;
+}
+.people_content > button {
+    font-weight: 500;
+    margin-top: 8px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    color:gray;
+    letter-spacing: 0.4px;
+}
+.people_content > button:hover{
+    font-weight: 600;
+    color: rgb(63, 63, 63);
+    border: 2px solid rgb(63, 63, 63);
+}
