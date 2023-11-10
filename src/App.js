@@ -12,7 +12,7 @@ import Mynetwork from './Components/Routes/Mynetwork';
 import Jobs from './Components/Routes/Jobs';
 import Messaging from './Components/Routes/Messaging';
 import Notifications from './Components/Routes/Notifications';
-import WholeProfile from './Components/Routes/WholeProfile';
+import WholeProfile from './Components/Routes/Profile/WholeProfile';
 
 function App() {
 

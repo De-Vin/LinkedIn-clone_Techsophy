@@ -1,6 +1,6 @@
 import React from 'react'
 import Profile from './Profile'
-import '../../App.css'
+import '../../../App.css'
 import ProfileWidget from './ProfileWidget'
 
 function WholeProfile() {
