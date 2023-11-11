@@ -10,13 +10,13 @@ import ProfileEducation from './ProfileEducation';
 function Profile() {
 
     const user = useSelector(state => state.user.user);
-    
+
     return (
 
         <div className='profile'>
             <div className='profile_header'>
                 <img src='https://images8.alphacoders.com/115/thumb-1920-1156488.png' alt='' />
-                <Avatar src={user.photoUrl} className='profile_avatar' sx={{ fontSize: '40px' }}>{user.displayName[0]}</Avatar>
+                <Avatar src={user.photoUrl} className='profile_avatar' sx={{ width: 140, height: 140 }}>{user.displayName[0]}</Avatar>
                 <div className='profile_header_section'>
                     <h2>{user.displayName}</h2>
                     <h4>{user.email}</h4>

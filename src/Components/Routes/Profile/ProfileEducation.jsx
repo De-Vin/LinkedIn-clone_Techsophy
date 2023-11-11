@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './Profile.css'
 import { useSelector } from 'react-redux';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
@@ -70,42 +70,41 @@ function ProfileEducation() {
 
 
 
-  return (
-    <div className='profile_experience'>
-    <div className='experience_header'>
-        <h2>Education</h2>
-        <AddIcon className='add_icon' onClick={() => openEducationPopup()} />
-    </div>
-    <div className='experience_content'>
-        {education.map((each, index) => {
-            return (<div className='experience_card'>
-                <div className='experience_cardinner'>
-                    <div className='experience_items' key={index}>
-                        <h2>{each.College}</h2>
-                        <span>{each.Degree}</span>
-                        <h4>{each.Duration}</h4>
-                        <h4>{each.Location}</h4>
-
-                    </div>
-                    <div className='experience_icons'>
-                        <ModeEditIcon className='about_editIcon' onClick={() => openEducationPopup(index)} />
-                        <DeleteIcon className='about_editIcon' onClick={() => { dispatch(removeeducation(index)) }} />
-                    </div>
-                </div>
+    return (
+        <div className='profile_experience'>
+            <div className='experience_header'>
+                <h2>Education</h2>
+                <AddIcon className='add_icon' onClick={() => openEducationPopup()} />
             </div>
-            );
-        })}
-        {educationPopup && (
-            <EducationPopup
-                educationinputValues={educationinputValues}
-                setEducationInputValues={setEducationInputValues}
-                educationeditIndex={educationeditIndex}
-                handleEducationClick={handleEducationClick}
-                onClose={handleEducationPopupClose}
-            />
-        )}
-    </div>
-</div>
+            <div className='experience_content'>
+                {education.map((each, index) => (
+                    <div className='experience_card' key={`${each.College}-${each.Degree || index}`}>
+                        <div className='experience_cardinner'>
+                            <div className='experience_items'>
+                                <h2>{each.College}</h2>
+                                <span>{each.Degree}</span>
+                                <h4>{each.Duration}</h4>
+                                <h4>{each.Location}</h4>
+                            </div>
+                            <div className='experience_icons'>
+                                <ModeEditIcon className='about_editIcon' onClick={() => openEducationPopup(index)} />
+                                <DeleteIcon className='about_editIcon' onClick={() => { dispatch(removeeducation(index)) }} />
+                            </div>
+                        </div>
+                    </div>
+                ))}
+
+                {educationPopup && (
+                    <EducationPopup
+                        educationinputValues={educationinputValues}
+                        setEducationInputValues={setEducationInputValues}
+                        educationeditIndex={educationeditIndex}
+                        handleEducationClick={handleEducationClick}
+                        onClose={handleEducationPopupClose}
+                    />
+                )}
+            </div>
+        </div>
     )
 }
 

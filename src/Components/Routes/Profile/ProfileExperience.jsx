@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './Profile.css'
 import { remove, addNew, edit } from '../../../features/experienceSlice';
 import ExperiencePopup from './ExperiencePopup';
@@ -25,7 +25,6 @@ function ProfileExperience() {
 
     const experience = useSelector(selectExperience);
     const dispatch = useDispatch();
-
 
     const openExperiencePopup = (index) => {
         if (index !== undefined) {
@@ -69,7 +68,7 @@ function ProfileExperience() {
             dispatch(addNew(inputValues));
         }
         handleExperiencePopupClose();
-    }; 
+    };
 
 
     return (
@@ -80,27 +79,27 @@ function ProfileExperience() {
             </div>
             <div className='experience_content'>
                 {
-                    experience.map((each, index) => {
-                        return (<div className='experience_card'>
+                    experience.map((each, index) => (
+                        <div className='experience_card' key={JSON.stringify(each.Role + each.CompanyName) || index}>
                             <div className='experience_cardinner'>
-                                <div className='experience_items' key={index}>
+                                <div className='experience_items'>
                                     <h2>{each.Role}</h2>
                                     <span>{each.CompanyName}</span>
                                     <h4>{each.Duration}. Months</h4>
                                     <h4>{each.Location}</h4>
-
                                 </div>
                                 <div className='experience_icons'>
                                     <ModeEditIcon className='about_editIcon' onClick={() => openExperiencePopup(index)} />
-                                    <DeleteIcon className='about_editIcon' onClick={() => { dispatch(remove(index)) }} />
+                                    <DeleteIcon className='about_editIcon' onClick={() => dispatch(remove(index))} />
                                 </div>
                             </div>
                             <div className='experience_cardouter'>
                                 <p>{each.Description}</p>
                             </div>
-                        </div>)
-                    })
+                        </div>
+                    ))
                 }
+
                 {experiencePopup && (
                     <ExperiencePopup
                         inputValues={inputValues}

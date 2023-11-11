@@ -7,8 +7,11 @@ const initialObject = {
   Location: 'Nuzvid',
 };
 
+// Retrieve data from localStorage if available
+const storedData = JSON.parse(localStorage.getItem('educationData')) || [initialObject];
+
 const initialState = {
-  value: [initialObject],
+  value: storedData,
 };
 
 export const educationSlice = createSlice({
@@ -18,14 +21,17 @@ export const educationSlice = createSlice({
     addeducation: (state, action) => {
       const newObject = action.payload;
       state.value = [...state.value, newObject];
+      localStorage.setItem('educationData', JSON.stringify(state.value));
     },
     removeeducation: (state, action) => {
       const index = action.payload;
       state.value = state.value.filter((_, ind) => index !== ind);
+      localStorage.setItem('educationData', JSON.stringify(state.value));
     },
     editeducation: (state, action) => {
       const { index, updatedObject } = action.payload;
       state.value[index] = updatedObject;
+      localStorage.setItem('educationData', JSON.stringify(state.value));
     },
   },
 });
